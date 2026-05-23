@@ -61,15 +61,21 @@ Top grouped drivers ranked by mean absolute SHAP value:
 ## Repo Structure
 
 ```
-├── preprocessing.py          # clean_data(), remove_outliers_iqr(), prepare_data()
-├── models.py                 # training functions for all 9 model families
+├── data/
+|   ├── kinder_clean.csv           # cleaned dataset (4,463 rows, 12 features)
+│   └── sample_kinder_data.csv       
 │
-├── 01_eda.ipynb              # missing values, distributions, bivariate plots, correlation (r=0.71)
-├── 02_preprocessing.ipynb    # cleaning pipeline, outlier removal, 80/20 train-test split
-├── 03_models.ipynb           # all models trained + compared, GridSearchCV tuning
-├── 04_feature_importance.ipynb  # XGBoost importances + grouped SHAP analysis
+├── notebooks/
+│   ├── 01_eda.ipynb              # missing values, distributions, bivariate plots, correlation (r=0.71)
+│   ├── 02_preprocessing.ipynb    # cleaning pipeline, outlier removal, 80/20 train-test split
+│   ├── 03_models.ipynb           # all models trained + compared, GridSearchCV tuning
+│   └── 04_feature_importance.ipynb  # XGBoost importances + grouped SHAP analysis
 │
-├── kinder_clean.csv          # cleaned dataset (4,463 rows, 12 features)
+├── src/
+│   ├── preprocessing.py          # clean_data(), remove_outliers_iqr(), prepare_data()
+│   └── models.py                 # training functions for all 9 model families
+│
+├── Report.pdf
 ├── requirements.txt
 └── README.md
 ```
@@ -95,7 +101,7 @@ Models compared: OLS, LASSO, Ridge, Elastic Net, Decision Tree, Random Forest, N
 ## Quickstart
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/kindergarten-star
+git clone https://github.com/huiqi16/kindergarten-star
 cd kindergarten-star
 pip install -r requirements.txt
 jupyter notebook 01_eda.ipynb
