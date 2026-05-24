@@ -1,4 +1,4 @@
-# Kindergarten Achievement Prediction | Project STAR
+# Kindergarten Achievement Analysis | Project STAR
 
 > Predicting early academic performance using student demographics, teacher attributes, and school context. Built on Tennessee's landmark **Project STAR** randomised controlled trial dataset.
 
